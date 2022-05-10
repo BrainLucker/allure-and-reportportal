@@ -1,5 +1,6 @@
 package ru.netology.delivery.test;
 
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import com.codeborne.selenide.Configuration;
@@ -36,6 +37,11 @@ public class DeliveryTest {
     }
 
     @Test
+    @Epic(value = "Интернет-банк")
+    @Feature(value = "Дебетовые карты")
+    @Story(value = "Доставка карты")
+    @Owner(value = "Ивлев Максим")
+    @Severity(value = SeverityLevel.CRITICAL)
     @DisplayName("Should successful plan and replan meeting")
     public void shouldSuccessfulPlanAndReplanMeeting() {
         var validUser = DataGenerator.Registration.generateUser("ru");
@@ -70,6 +76,12 @@ public class DeliveryTest {
     }
 
     @Test
+    @Issue(value = "1")
+    @Epic(value = "Интернет-банк")
+    @Feature(value = "Дебетовые карты")
+    @Story(value = "Доставка карты")
+    @Owner(value = "Ивлев Максим")
+    @Severity(value = SeverityLevel.MINOR)
     @DisplayName("Should successful plan meeting if rare user's name")
     public void shouldSuccessfulPlanMeetingIfRareName() {
         var validUser = DataGenerator.Registration.generateUser("ru");
@@ -92,6 +104,12 @@ public class DeliveryTest {
     }
 
     @Test
+    @Issue(value = "2")
+    @Epic(value = "Интернет-банк")
+    @Feature(value = "Дебетовые карты")
+    @Story(value = "Доставка карты")
+    @Owner(value = "Ивлев Максим")
+    @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Should get error message if entered invalid phone number")
     public void shouldGetErrorIfInvalidPhone() {
         var validUser = DataGenerator.Registration.generateUser("ru");
